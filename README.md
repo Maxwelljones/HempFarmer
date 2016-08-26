@@ -1,15 +1,17 @@
 |[![HempFarmer](https://s25.postimg.org/4fflfyq0f/hempfarmer.png)](https://postimg.org/image/79iqtes6j/ "HempFarmer")|
-####Contributing
+###Contributing
+[CodingStyle](https://github.com/MinecraftModDevelopment/HempFarmer/blob/master/CodingStyle.md)
+
 _Anyone who submits content to this project will be credited. Please state how you would like to be identified in your first pull request or add it yourself in the [mcmod.info](https://github.com/MinecraftModDevelopment/HempFarmer/blob/master/src/main/resources/mcmod.info#L9-L10) file along with your first pull.
 Any content contributed to this project should be done via pull request at the git repository.
 By contributing to this project you are agreeing that your contribution becomes part of the project and to the terms and conditions of the [HempFarmer license](https://raw.githubusercontent.com/MinecraftModDevelopment/HempFarmer/master/LICENSE.txt)._
 
-####Reporting Bugs/Issues
+###Reporting Bugs/Issues
 [Report Issues or Bugs](https://github.com/MinecraftModDevelopment/HempFarmer/issues)
 
 [Curse Page](https://minecraft.curseforge.com/projects/hempfarmer)
 
-####License
+###License
 HempFamer is an open source Minecraft Mod that adds hemp and marijuana to Minecraft.
 
     Copyright (C) <2016> <SeqSEE>
