@@ -13,17 +13,17 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class CommonProxy {
-	
+
 	public void preInit(FMLPreInitializationEvent preEvent) {
 		MinecraftForge.EVENT_BUS.register(HempFarmer.instance);
-		register(preEvent);		
+		register(preEvent);
 	}
 
 	public void init(FMLInitializationEvent event) {
 		HFOreDictionary.init(event);
 		registerRender(event);
 	}
-		
+
 	public void register(FMLPreInitializationEvent preEvent) {
 		HFBlocks.register(preEvent);
 		HFItems.register(preEvent);

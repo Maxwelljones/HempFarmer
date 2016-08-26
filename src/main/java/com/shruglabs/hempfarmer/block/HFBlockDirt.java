@@ -4,6 +4,7 @@ import com.shruglabs.hempfarmer.creativetab.HFCreativeTabs;
 import com.shruglabs.hempfarmer.init.HFBlocks;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
@@ -23,8 +24,8 @@ public class HFBlockDirt extends Block {
 		this.setHardness(0.5F);
 		this.setRegistryName(name);
 		this.setUnlocalizedName(name);
-		this.blockSoundType = Blocks.DIRT.getSoundType();
-		this.setCreativeTab(HFCreativeTabs.HFMaterials);
+		this.blockSoundType = SoundType.GROUND;
+		this.setCreativeTab(HFCreativeTabs.HFMisc);
 		addToBlocks(this);
 	}
 

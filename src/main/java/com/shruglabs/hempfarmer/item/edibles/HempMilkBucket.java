@@ -1,5 +1,6 @@
 package com.shruglabs.hempfarmer.item.edibles;
 
+import com.shruglabs.hempfarmer.creativetab.HFCreativeTabs;
 import com.shruglabs.hempfarmer.init.HFItems;
 
 import net.minecraft.item.Item;
@@ -11,6 +12,7 @@ public class HempMilkBucket extends ItemBucketMilk {
 		this.setRegistryName(name);
 		this.setUnlocalizedName(name);
 		addToItems(this);
+		this.setCreativeTab(HFCreativeTabs.FOOD);
 	}
 
 	private void addToItems(Item item) {

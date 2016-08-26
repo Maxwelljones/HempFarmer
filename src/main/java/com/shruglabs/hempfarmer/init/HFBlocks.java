@@ -31,8 +31,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class HFBlocks extends Blocks {
 
-	public static List<Item> items = new ArrayList();
-
 	public static List<Block> blocks = new ArrayList();
 	public static final Block burlap = new Burlap(HFMaterial.BURLAP, "burlap");
 	public static final Block violet_burlap = new VioletBurlap(HFMaterial.VIOLET_BURLAP, "violet_burlap");

@@ -5,6 +5,7 @@ import com.shruglabs.hempfarmer.init.HFBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
@@ -25,8 +26,8 @@ public class HFBlockBurlap extends BlockBreakable {
 		super(material, false);
 		this.setRegistryName(name);
 		this.setUnlocalizedName(name);
-		this.blockSoundType = Blocks.HAY_BLOCK.getSoundType();
-		this.setCreativeTab(HFCreativeTabs.HFMaterials);
+		this.blockSoundType = SoundType.PLANT;
+		this.setCreativeTab(HFCreativeTabs.HFMisc);
 		addToBlocks(this);
 	}
 

@@ -27,10 +27,22 @@ public class HFCreativeTabs extends CreativeTabs {
 		}
 	};
 
-	public static final HFCreativeTabs HFMaterials = new HFCreativeTabs(CreativeTabs.getNextID(), "hfmaterials") {
+	public static final HFCreativeTabs HFMisc = new HFCreativeTabs(CreativeTabs.getNextID(), "hfmisc") {
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() {
-			return Item.getItemFromBlock(HFBlocks.burlap);
+			return HFItems.hemp_oil;
+		}
+	};
+	public static final HFCreativeTabs HFDrugs = new HFCreativeTabs(CreativeTabs.getNextID(), "hfdrugs") {
+		@SideOnly(Side.CLIENT)
+		public Item getTabIconItem() {
+			return HFItems.regs_joint;
+		}
+	};
+	public static final HFCreativeTabs HFFoods = new HFCreativeTabs(CreativeTabs.getNextID(), "hffoods") {
+		@SideOnly(Side.CLIENT)
+		public Item getTabIconItem() {
+			return HFItems.bowl_hemp_hearts;
 		}
 	};
 

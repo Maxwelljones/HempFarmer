@@ -1,11 +1,13 @@
 itemGroup.hfcombat=HempFarmer-Combat
 itemGroup.hfcrops=HempFarmer-Crops
 itemGroup.hfdrugs=HempFarmer-Drugs
-itemGroup.hfmaterials=HempFarmer-Materials
+itemGroup.hffoods=HempFarmer-Foods
+itemGroup.hfmisc=HempFarmer-Misc 
 
 item.leaf.name=Pot Leaf
 item.leaf_wand.name=Leaf Wand
 item.superior_leaf_wand.name=Superior Leaf Wand
+
 item.seeds_hemp.name=Hemp Seeds
 item.seeds_indica.name=Indica Seeds
 item.seeds_sativa.name=Sativa Seeds
@@ -15,13 +17,16 @@ item.seeds_sativa_toasted.name=Toasted Sativa Seeds
 item.seeds_hemp_crushed.name=Crushed Hemp Seeds
 item.seeds_indica_crushed.name=Crushed Indica Seeds
 item.seeds_sativa_crushed.name=Crushed Sativa Seeds
+
 item.hemp_hearts.name=Original Hemp Hearts
 item.lime_hemp_hearts.name=Lime Hemp Hearts
-item.violethemp_hearts.name=Violet Hemp Hearts
+item.violet_hemp_hearts.name=Violet Hemp Hearts
 item.bowl_hemp_hearts.name=Bowl of Original Hemp Hearts
 item.bowl_lime_hemp_hearts.name=Bowl of Lime Hemp Hearts
 item.bowl_violet_hemp_hearts.name=Bowl of Violet Hemp Hearts
+
 item.hemp_milk_bucket.name=Hemp Milk
+
 item.raw_hemp.name=Hemp
 item.lime_raw_hemp.name=Lime Hemp
 item.violet_raw_hemp.name=Violet Hemp

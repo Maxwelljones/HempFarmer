@@ -1,5 +1,6 @@
 package com.shruglabs.hempfarmer.item.edibles;
 
+import com.shruglabs.hempfarmer.creativetab.HFCreativeTabs;
 import com.shruglabs.hempfarmer.init.HFItems;
 
 import net.minecraft.item.Item;
@@ -11,6 +12,7 @@ public class HempFood extends ItemFood {
 		super(amount, saturation, false);
 		this.setRegistryName(name);
 		this.setUnlocalizedName(name);
+		this.setCreativeTab(HFCreativeTabs.HFFoods);
 		addToItems(this);
 	}
 

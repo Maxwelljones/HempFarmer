@@ -4,7 +4,7 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
-import com.shruglabs.hempfarmer.creativetab.DrugsTab;
+import com.shruglabs.hempfarmer.creativetab.HFCreativeTabs;
 import com.shruglabs.hempfarmer.init.HFItems;
 
 import net.minecraft.entity.EntityLivingBase;
@@ -35,7 +35,7 @@ public class PotBrownie extends ItemFood {
 		this.alwaysEdible = true;
 		this.setRegistryName(name);
 		this.setUnlocalizedName(name);
-		this.setCreativeTab(DrugsTab.HFDrugs);
+		this.setCreativeTab(HFCreativeTabs.HFFoods);
 
 		addToItems(this);
 	}

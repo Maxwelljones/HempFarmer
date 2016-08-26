@@ -1,6 +1,6 @@
 package com.shruglabs.hempfarmer.item;
 
-import com.shruglabs.hempfarmer.creativetab.DrugsTab;
+import com.shruglabs.hempfarmer.creativetab.HFCreativeTabs;
 import com.shruglabs.hempfarmer.init.HFItems;
 
 import net.minecraft.item.Item;
@@ -11,7 +11,7 @@ public class HFDrug extends Item {
 		this.setMaxStackSize(maxStack);
 		this.setRegistryName(name);
 		this.setUnlocalizedName(name);
-		this.setCreativeTab(DrugsTab.HFDrugs);
+		this.setCreativeTab(HFCreativeTabs.HFDrugs);
 		addToItems(this);
 	}
 

@@ -17,13 +17,12 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 
-@Mod(modid = Reference.ID, name = Reference.NAME, version = Reference.VER, acceptedMinecraftVersions = "1.9.4,)", dependencies = "required-after:Forge@[12.17.0.1976,)")
+@Mod(updateJSON = Reference.UPDATE, modid = Reference.ID, name = Reference.NAME, version = Reference.VER, acceptedMinecraftVersions = "1.9.4,)", dependencies = Reference.DEPENDENCIES)
 public class HempFarmer {
 
 	public static Configuration config;
 	@Instance(value = "hempfarmer")
 	public static HempFarmer instance;
-
 
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY)
 	private static CommonProxy proxy;
