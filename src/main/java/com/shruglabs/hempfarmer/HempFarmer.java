@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 
-@Mod(updateJSON = Reference.UPDATE, modid = Reference.ID, name = Reference.NAME, version = Reference.VER, acceptedMinecraftVersions = "1.9.4,)", dependencies = Reference.DEPENDENCIES)
+@Mod(updateJSON = Reference.UPDATE, modid = Reference.ID, name = Reference.NAME, version = Reference.VER, dependencies = Reference.DEPENDENCIES)
 public class HempFarmer {
 
 	public static Configuration config;
