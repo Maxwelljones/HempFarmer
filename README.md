@@ -1,5 +1,5 @@
 # HempFarmer
-
+[![hempfarmer.png](https://s25.postimg.org/4fflfyq0f/hempfarmer.png)](https://postimg.org/image/79iqtes6j/)
 ####Contributing
 _Anyone who submits content to this project will be credited. Please state how you would like to be identified in your first pull request or add it yourself in the [mcmod.info](https://github.com/MinecraftModDevelopment/HempFarmer/blob/master/src/main/resources/mcmod.info#L9-L10) file along with your first pull.
 Any content contributed to this project should be done via pull request at the git repository.
