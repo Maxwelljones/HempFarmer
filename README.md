@@ -14,7 +14,7 @@ https://github.com/MinecraftModDevelopment/HempFarmer/blob/master/LICENSE.txt
 ####Contributing
 _Anyone who submits content to this project will be credited.
 Any content contributed to this project should be done via pull request at the git repository.
-By contributing to this project you are agreeing that your contribution becomes part of the project and to the terms and conditions of HempFarmer's license._
+By contributing to this project you are agreeing that your contribution becomes part of the project and to the terms and conditions of the HempFarmer license._
 
 
 ####Reporting Bugs/Issues
