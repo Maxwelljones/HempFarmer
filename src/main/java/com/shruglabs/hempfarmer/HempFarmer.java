@@ -1,6 +1,6 @@
 /**
  *  HempFarmer - Adds hemp and marijuana to Minecraft.
-    Copyright (C) <year>  <SeqSEE>
+    Copyright (C) <2016>  <SeqSEE>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -37,7 +37,6 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 
 @Mod(updateJSON = Reference.UPDATE, modid = Reference.ID, name = Reference.NAME, version = Reference.VER, dependencies = Reference.DEPENDENCIES)
 public class HempFarmer {
-
 	public static Configuration config;
 	@Instance(value = "hempfarmer")
 	public static HempFarmer instance;
