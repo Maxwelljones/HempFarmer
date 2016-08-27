@@ -24,6 +24,7 @@ public class HFBlockBurlap extends Block {
 
 	public HFBlockBurlap(Material material, String name) {
 		super(material);
+		this.setHardness(0.35F);
 		this.setRegistryName(name);
 		this.setUnlocalizedName(name);
 		this.blockSoundType = SoundType.PLANT;
