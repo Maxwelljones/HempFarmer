@@ -1,4 +1,4 @@
-|[![HempFarmer](https://s25.postimg.org/4fflfyq0f/hempfarmer.png)](https://postimg.org/image/79iqtes6j/ "HempFarmer")|
+[![HempFarmer](https://s25.postimg.org/4fflfyq0f/hempfarmer.png)](https://postimg.org/image/79iqtes6j/ "HempFarmer")
 ###Contributing
 [CodingStyle](https://github.com/MinecraftModDevelopment/HempFarmer/blob/master/CodingStyle.md)
 
