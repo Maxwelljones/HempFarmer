@@ -3,6 +3,8 @@ package com.shruglabs.hempfarmer;
 import com.shruglabs.hempfarmer.block.cannibis.Hemp;
 import com.shruglabs.hempfarmer.block.cannibis.Indica;
 import com.shruglabs.hempfarmer.block.cannibis.Sativa;
+import com.shruglabs.hempfarmer.entity.EntityShotLeaf;
+import com.shruglabs.hempfarmer.item.HFWand;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
@@ -12,6 +14,9 @@ public class Config {
 
 	public static void serverConfig(FMLPreInitializationEvent preEvent) {
 		HempFarmer.config = new Configuration(preEvent.getSuggestedConfigurationFile());
+		EntityShotLeaf.entity = HempFarmer.config.getBoolean("Wand- Effective on Entities:", "Wand", true, "Wand Effective on non-player entities.");
+		EntityShotLeaf.player = HempFarmer.config.getBoolean("Wand- Effective on Players:", "Wand", true, "Wand Effective on player entities.");
+		EntityShotLeaf.block = HempFarmer.config.getBoolean("Wand- Effective on Blocks:", "Wand", true, "Wand Effective on blocks.");
 		Hemp.seedsGrassRate = HempFarmer.config.getInt("Hemp- Seeds drop rate:", "Drops-Grassseeds", 6, 1, 10,
 				"Weighted drop rate from grass. Wheat is 10 by default.");
 		Hemp.seedsCropAmount = HempFarmer.config.getInt("Hemp- Seeds drop amount:", "Drops-Seeds", 1, 1, 5,

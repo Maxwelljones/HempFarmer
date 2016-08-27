@@ -5,7 +5,9 @@ import com.shruglabs.hempfarmer.init.HFBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.init.Blocks;
 import net.minecraft.potion.Potion;
@@ -16,6 +18,9 @@ import net.minecraft.world.World;
 
 public class EntityShotLeaf extends EntityThrowable {
 
+	public static boolean entity;
+	public static boolean player;
+	public static boolean block;
 	private EntityLivingBase shootingEntity;
 
 	public EntityShotLeaf(World worldIn) {
@@ -54,18 +59,27 @@ public class EntityShotLeaf extends EntityThrowable {
 	protected void onImpact(RayTraceResult result) {
 		World world = this.worldObj;
 		if (result.typeOfHit.equals(result.typeOfHit.ENTITY)) {
-			if (result.entityHit instanceof EntityLivingBase) {
-				EntityLivingBase entity = (EntityLivingBase) result.entityHit;
-				if (!world.isRemote) {
-					this.setDead();
-					entity.addPotionEffect(new PotionEffect(Potion.getPotionById(9), 100, 1, false, false));
-					entity.addPotionEffect(new PotionEffect(Potion.getPotionById(25), 200, 1, false, false));
-					entity.addPotionEffect(new PotionEffect(Potion.getPotionById(24), 300, 1, false, false));
-					entity.addPotionEffect(new PotionEffect(Potion.getPotionById(11), 500, 5, false, false));
+				if (result.entityHit instanceof EntityPlayer && player) {
+					EntityLivingBase entity = (EntityLivingBase) result.entityHit;
+					if (!world.isRemote) {
+						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(9), 100, 1, false, false));
+						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(25), 200, 1, false, false));
+						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(24), 300, 1, false, false));
+						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(11), 500, 5, false, false));
+					}
 				}
-			}
+				if (result.entityHit instanceof EntityLiving && entity) {
+					EntityLivingBase entity = (EntityLivingBase) result.entityHit;
+					if (!world.isRemote) {
+						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(9), 100, 1, false, false));
+						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(25), 200, 1, false, false));
+						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(24), 300, 1, false, false));
+						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(11), 500, 5, false, false));
+					}
+				}
 		}
-		if (result.typeOfHit.equals(result.typeOfHit.BLOCK)) {
+
+		if (result.typeOfHit.equals(result.typeOfHit.BLOCK) && block) {
 			Block block = world.getBlockState(result.getBlockPos()).getBlock();
 			int blockID = block.getIdFromBlock(block);
 			IBlockState newState = null;

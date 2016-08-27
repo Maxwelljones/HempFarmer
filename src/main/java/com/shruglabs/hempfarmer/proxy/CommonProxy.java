@@ -11,6 +11,7 @@ import com.shruglabs.hempfarmer.init.HFBlocks;
 import com.shruglabs.hempfarmer.init.HFItems;
 import com.shruglabs.hempfarmer.init.HFOreDictionary;
 import com.shruglabs.hempfarmer.init.HFRecipes;
+import com.shruglabs.hempfarmer.item.HFWand;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -24,6 +25,9 @@ public class CommonProxy {
 		if (preEvent.getSide().isServer())
 			Config.serverConfig(preEvent);
 		else {
+			EntityShotLeaf.entity = true;
+			EntityShotLeaf.player = true;
+			EntityShotLeaf.block = true;
 			Hemp.seedsGrassRate = 6;
 			Indica.seedsGrassRate = 4;
 			Sativa.seedsGrassRate = 4;
