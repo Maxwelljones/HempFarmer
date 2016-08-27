@@ -59,89 +59,91 @@ public class EntityShotLeaf extends EntityThrowable {
 	protected void onImpact(RayTraceResult result) {
 		World world = this.worldObj;
 		if (result.typeOfHit.equals(result.typeOfHit.ENTITY)) {
-				if (result.entityHit instanceof EntityPlayer && player) {
-					EntityLivingBase entity = (EntityLivingBase) result.entityHit;
-					if (!world.isRemote) {
-						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(9), 100, 1, false, false));
-						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(25), 200, 1, false, false));
-						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(24), 300, 1, false, false));
-						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(11), 500, 5, false, false));
-					}
+			if (result.entityHit instanceof EntityPlayer && player) {
+				EntityLivingBase entity = (EntityLivingBase) result.entityHit;
+				if (!world.isRemote) {
+					entity.addPotionEffect(new PotionEffect(Potion.getPotionById(9), 100, 1, false, false));
+					entity.addPotionEffect(new PotionEffect(Potion.getPotionById(25), 200, 1, false, false));
+					entity.addPotionEffect(new PotionEffect(Potion.getPotionById(24), 300, 1, false, false));
+					entity.addPotionEffect(new PotionEffect(Potion.getPotionById(11), 500, 5, false, false));
 				}
-				if (result.entityHit instanceof EntityLiving && entity) {
-					EntityLivingBase entity = (EntityLivingBase) result.entityHit;
-					if (!world.isRemote) {
-						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(9), 100, 1, false, false));
-						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(25), 200, 1, false, false));
-						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(24), 300, 1, false, false));
-						entity.addPotionEffect(new PotionEffect(Potion.getPotionById(11), 500, 5, false, false));
-					}
+			}
+			if (result.entityHit instanceof EntityLiving && entity) {
+				EntityLivingBase entity = (EntityLivingBase) result.entityHit;
+				if (!world.isRemote) {
+					entity.addPotionEffect(new PotionEffect(Potion.getPotionById(9), 100, 1, false, false));
+					entity.addPotionEffect(new PotionEffect(Potion.getPotionById(25), 200, 1, false, false));
+					entity.addPotionEffect(new PotionEffect(Potion.getPotionById(24), 300, 1, false, false));
+					entity.addPotionEffect(new PotionEffect(Potion.getPotionById(11), 500, 5, false, false));
 				}
+			}
 		}
 
 		if (result.typeOfHit.equals(result.typeOfHit.BLOCK) && block) {
-			Block block = world.getBlockState(result.getBlockPos()).getBlock();
-			int blockID = block.getIdFromBlock(block);
-			IBlockState newState = null;
-			boolean changeable = false;
-			switch (blockID) {
-			case 4:
-				changeable = true;
-				newState = Blocks.GRAVEL.getDefaultState();
-				break;
-			case 12:
-				changeable = true;
-				newState = Blocks.CLAY.getDefaultState();
-				break;
-			case 13:
-				changeable = true;
-				newState = Blocks.SAND.getDefaultState();
-				break;
-			case 30:
-				changeable = true;
-				newState = Blocks.COAL_ORE.getDefaultState();
-				break;
-			case 18:
-				changeable = true;
-				newState = Blocks.WEB.getDefaultState();
-				break;
-			case 37:
-				changeable = true;
-				Block hemp = rand.nextBoolean() ? HFBlocks.sativa_crop : HFBlocks.indica_crop;
-				newState = hemp.getDefaultState().withProperty(HFBlockCrops.AGE, rand.nextInt(7));
-				break;
-			case 38:
-				changeable = true;
-				newState = HFBlocks.hemp_crop.getDefaultState().withProperty(HFBlockCrops.AGE, rand.nextInt(7));
-				break;
-			case 161:
-				changeable = true;
-				newState = Blocks.WEB.getDefaultState();
-				break;
-			default:
-				changeable = false;
-				break;
-			}
-			if (blockID == HFBlocks.getIdFromBlock(HFBlocks.oily_dirt)) {
-				changeable = true;
-				newState = Blocks.GLOWSTONE.getDefaultState();
-			}
-			if (blockID == HFBlocks.getIdFromBlock(HFBlocks.violet_dirt)) {
-				changeable = true;
-				newState = Blocks.IRON_ORE.getDefaultState();
-			}
-			if (blockID == HFBlocks.getIdFromBlock(HFBlocks.lime_dirt)) {
-				changeable = true;
-				newState = Blocks.EMERALD_ORE.getDefaultState();
-			}
-			if (blockID == HFBlocks.getIdFromBlock(HFBlocks.resin_dirt)) {
-				changeable = true;
-				newState = Blocks.REDSTONE_ORE.getDefaultState();
-			}
+			if (!world.isRemote) {
+				Block block = world.getBlockState(result.getBlockPos()).getBlock();
+				int blockID = block.getIdFromBlock(block);
+				IBlockState newState = null;
+				boolean changeable = false;
+				switch (blockID) {
+				case 4:
+					changeable = true;
+					newState = Blocks.GRAVEL.getDefaultState();
+					break;
+				case 12:
+					changeable = true;
+					newState = Blocks.CLAY.getDefaultState();
+					break;
+				case 13:
+					changeable = true;
+					newState = Blocks.SAND.getDefaultState();
+					break;
+				case 30:
+					changeable = true;
+					newState = Blocks.COAL_ORE.getDefaultState();
+					break;
+				case 18:
+					changeable = true;
+					newState = Blocks.WEB.getDefaultState();
+					break;
+				case 37:
+					changeable = true;
+					Block hemp = rand.nextBoolean() ? HFBlocks.sativa_crop : HFBlocks.indica_crop;
+					newState = hemp.getDefaultState().withProperty(HFBlockCrops.AGE, rand.nextInt(7));
+					break;
+				case 38:
+					changeable = true;
+					newState = HFBlocks.hemp_crop.getDefaultState().withProperty(HFBlockCrops.AGE, rand.nextInt(7));
+					break;
+				case 161:
+					changeable = true;
+					newState = Blocks.WEB.getDefaultState();
+					break;
+				default:
+					changeable = false;
+					break;
+				}
+				if (blockID == HFBlocks.getIdFromBlock(HFBlocks.oily_dirt)) {
+					changeable = true;
+					newState = Blocks.GLOWSTONE.getDefaultState();
+				}
+				if (blockID == HFBlocks.getIdFromBlock(HFBlocks.violet_dirt)) {
+					changeable = true;
+					newState = Blocks.IRON_ORE.getDefaultState();
+				}
+				if (blockID == HFBlocks.getIdFromBlock(HFBlocks.lime_dirt)) {
+					changeable = true;
+					newState = Blocks.EMERALD_ORE.getDefaultState();
+				}
+				if (blockID == HFBlocks.getIdFromBlock(HFBlocks.resin_dirt)) {
+					changeable = true;
+					newState = Blocks.REDSTONE_ORE.getDefaultState();
+				}
 
-			if (changeable && newState != null) {
-				world.destroyBlock(result.getBlockPos(), false);
-				world.setBlockState(result.getBlockPos(), newState);
+				if (changeable && newState != null) {
+					world.destroyBlock(result.getBlockPos(), false);
+					world.setBlockState(result.getBlockPos(), newState);
+				}
 			}
 		}
 		if (!world.isRemote) {
