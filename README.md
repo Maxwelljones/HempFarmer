@@ -1,9 +1,8 @@
 <p align="center"><img src="https://s25.postimg.org/4fflfyq0f/hempfarmer.png" alt="HempFarmer" height="450" width="600"></p>
 
 ###[Curse Page](https://minecraft.curseforge.com/projects/hempfarmer)
-
-HempFamer is an open source Minecraft Mod that adds hemp and marijuana to Minecraft.
 ```
+HempFamer is an open source Minecraft Mod that adds hemp and marijuana to Minecraft.
     Copyright (C) <2016> <SeqSEE>
     
     This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
