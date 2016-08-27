@@ -1,4 +1,4 @@
-[![HempFarmer](https://s25.postimg.org/4fflfyq0f/hempfarmer.png)](https://postimg.org/image/79iqtes6j/ "HempFarmer")
+<p align="center"><img src="https://s25.postimg.org/4fflfyq0f/hempfarmer.png" alt="HempFarmer" height="450" width="600"></p>
 
 ###[Curse Page](https://minecraft.curseforge.com/projects/hempfarmer)
 
