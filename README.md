@@ -1,6 +1,6 @@
 <p align="center"><img src="https://s25.postimg.org/4fflfyq0f/hempfarmer.png" alt="HempFarmer" height="450" width="600"></p>
 
-<p<a href="http://shruglabs.com/"><img src="https://github.com/MinecraftModDevelopment/HempFarmer/raw/gh-pages/images/ShrugLabs-Logo.PNG" alt="ShrugLabs" width="100" height="100" /></a><a href="https://minecraftmoddevelopment.github.io/"><img src="https://github.com/MinecraftModDevelopment/HempFarmer/raw/gh-pages/images/mmdgithub.png" alt=" alt=" width="100" height="100" /></a><a href="https://minecraft.curseforge.com/projects/hempfarmer"><img src="https://github.com/MinecraftModDevelopment/HempFarmer/raw/gh-pages/images/HempFarmer-Curse.PNG" alt="HempFarmer on Curse" width="100" height="100"></p>
+<p><a href="https://minecraft.curseforge.com/projects/hempfarmer"><img src="https://github.com/MinecraftModDevelopment/HempFarmer/raw/gh-pages/images/HempFarmer-Curse.PNG" alt="HempFarmer on Curse" width="100" height="100"><a href="http://shruglabs.com/"><img src="https://github.com/MinecraftModDevelopment/HempFarmer/raw/gh-pages/images/ShrugLabs-Logo.PNG" alt="ShrugLabs" width="100" height="100" /></a><a href="https://minecraftmoddevelopment.github.io/"><img src="https://github.com/MinecraftModDevelopment/HempFarmer/raw/gh-pages/images/mmdgithub.png" alt=" alt=" width="100" height="100" /></a></p>
 
 ---
 ###Contributing
