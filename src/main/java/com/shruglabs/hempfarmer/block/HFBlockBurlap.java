@@ -18,12 +18,12 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class HFBlockBurlap extends BlockBreakable {
+public class HFBlockBurlap extends Block {
 
 	protected static AxisAlignedBB AABB;
 
 	public HFBlockBurlap(Material material, String name) {
-		super(material, false);
+		super(material);
 		this.setRegistryName(name);
 		this.setUnlocalizedName(name);
 		this.blockSoundType = SoundType.PLANT;

@@ -99,10 +99,6 @@ public class HFWand extends HFItem {
 		}
 	}
 
-	public boolean onBlockStartBreak(ItemStack itemstack, BlockPos pos, EntityPlayer player) {
-		return !player.getEntityWorld().getBlockState(pos).getBlock().equals(Blocks.TALLGRASS) || !player.getEntityWorld().getBlockState(pos).equals(Blocks.GRASS);
-	}
-
 	public float getStrVsBlock(ItemStack stack, IBlockState state) {
 		return !state.getBlock().equals(Blocks.TALLGRASS) || !state.equals(Blocks.GRASS)? 0.0F : 1.0F;
 	}

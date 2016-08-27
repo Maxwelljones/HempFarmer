@@ -4,6 +4,7 @@ import com.shruglabs.hempfarmer.creativetab.HFCreativeTabs;
 import com.shruglabs.hempfarmer.init.HFBlocks;
 
 import net.minecraft.block.BlockCrops;
+import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;
 
 public class HFBlockCrops extends BlockCrops {
@@ -19,6 +20,7 @@ public class HFBlockCrops extends BlockCrops {
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(HFCreativeTabs.HFCrops);
 		addToBlocks(this);
+
 	}
 
 	private void addToBlocks(BlockCrops block) {
