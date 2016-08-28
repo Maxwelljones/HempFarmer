@@ -1,23 +1,26 @@
 {
   "homepage": "https://minecraft.curseforge.com/projects/hempfarmer",
   "promos": {
-    "1.10.2-latest": "1.7.0",
-    "1.10.0-latest": "1.7.0",
-    "1.9.4-latest": "1.7.0",
-    "1.10.2-recommended": "1.7.0",
-    "1.10.0-recommended": "1.7.0",
-    "1.9.4-recommended": "1.7.0"
+    "1.10.2-latest": "1.7.1",
+    "1.10.0-latest": "1.7.1",
+    "1.9.4-latest": "1.7.1",
+    "1.10.2-recommended": "1.7.1",
+    "1.10.0-recommended": "1.7.1",
+    "1.9.4-recommended": "1.7.1"
 
   },
   "1.10.2": {
+    "1.7.1": "Release 1.7.1 - Bugfix - Shears disapearing"
     "1.7.0": "Release 1.7.0 - Config changes and Versioning changes. Add wand abilities. Add new foods."
 
   },
   "1.10.0": {
+    "1.7.1": "Release 1.7.1 - Bugfix - Shears disapearing"
     "1.10.0": "Release 1.7.0 - Config changes and Versioning changes. Add wand abilities. Add new foods."
 
   },
   "1.9.4": {
+    "1.7.1": "Release 1.7.1 - Bugfix - Shears disapearing"
     "1.7.0": "Release 1.7.0 - Config changes and Versioning changes. Add wand abilities. Add new foods."
   }
 }

@@ -63,8 +63,11 @@ public class HempFarmer {
 				if (event.craftMatrix.getStackInSlot(i) != null) {
 					ItemStack stack = event.craftMatrix.getStackInSlot(i);
 					if (stack.getItem() instanceof ItemShears) {
-						--stack.stackSize;
-						event.craftMatrix.setInventorySlotContents(i, stack);
+						if(stack.getItemDamage() < stack.getMaxDamage()){
+							++stack.stackSize;
+							stack.setItemDamage(stack.getItemDamage() + 1);
+							event.craftMatrix.setInventorySlotContents(i, stack);
+						}
 					}
 				}
 			}
