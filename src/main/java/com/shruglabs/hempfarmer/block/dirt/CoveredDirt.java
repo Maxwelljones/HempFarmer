@@ -7,6 +7,7 @@ import java.util.Random;
 import com.shruglabs.hempfarmer.block.HFBlockDirt;
 
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -27,6 +28,11 @@ public class CoveredDirt extends HFBlockDirt {
 		Item item = Blocks.DIRT.getItemDropped(state, rand, fortune);
 		ret.add(new ItemStack(item, 1));
 		return ret;
+	}
+	
+	@Override
+	public boolean canSilkHarvest(World world, BlockPos pos, IBlockState state, EntityPlayer player){
+	return false;
 	}
 
 }
