@@ -146,6 +146,10 @@ public class HFRecipes {
 				new Object[] { new ItemStack(Items.EGG), new ItemStack(Items.SUGAR), "milkBucket",
 						new ItemStack(Items.DYE, 1, 3), new ItemStack(HFItems.bud), new ItemStack(HFItems.indica_bud),
 						new ItemStack(HFItems.sativa_bud) }));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(HFItems.pot_brownie),
+				new Object[] { new ItemStack(Items.EGG), new ItemStack(Items.SUGAR), "listAllmilk",
+						new ItemStack(Items.DYE, 1, 3), new ItemStack(HFItems.bud), new ItemStack(HFItems.indica_bud),
+						new ItemStack(HFItems.sativa_bud) }));
 		// Rolling Paper//- Shapeless Recipe
 		GameRegistry
 				.addRecipe(new ShapelessOreRecipe(new ItemStack(HFItems.rolling_paper, 3), new Object[] { "paper" }));
