@@ -200,6 +200,12 @@ public class HFRecipes {
 				new Object[] { new ItemStack(HFItems.lime_hemp_hearts), new ItemStack(Items.BOWL), "bucketMilk" }));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(HFItems.bowl_violet_hemp_hearts),
 				new Object[] { new ItemStack(HFItems.violet_hemp_hearts), new ItemStack(Items.BOWL), "bucketMilk" }));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(HFItems.bowl_hemp_hearts),
+				new Object[] { new ItemStack(HFItems.hemp_hearts), new ItemStack(Items.BOWL), "listAllmilk" }));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(HFItems.bowl_lime_hemp_hearts),
+				new Object[] { new ItemStack(HFItems.lime_hemp_hearts), new ItemStack(Items.BOWL), "listAllmilk" }));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(HFItems.bowl_violet_hemp_hearts),
+				new Object[] { new ItemStack(HFItems.violet_hemp_hearts), new ItemStack(Items.BOWL), "listAllmilk" }));
 	}
 
 	/*
