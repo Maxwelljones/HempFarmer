@@ -44,6 +44,7 @@ public class HFOreDictionary extends OreDictionary {
 
 		// misc
 		registerOre("paper", new ItemStack(HFItems.hemp_paper));
+		registerOre("listAllmilk",new ItemStack(HFItems.hemp_milk_bucket));
 		registerOre("bucketMilk", new ItemStack(HFItems.hemp_milk_bucket));
 		registerOre("bucketMilk", new ItemStack(Items.MILK_BUCKET));
 		registerOre("hempseedsCrushed", new ItemStack(HFItems.seeds_hemp_crushed));
