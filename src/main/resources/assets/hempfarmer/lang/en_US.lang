@@ -4,6 +4,7 @@ itemGroup.hfdrugs=HempFarmer-Drugs
 itemGroup.hffoods=HempFarmer-Foods
 itemGroup.hfmisc=HempFarmer-Misc 
 
+item.shot_leaf.name=Magical Leaf
 item.leaf.name=Pot Leaf
 item.leaf_wand.name=Leaf Wand
 item.superior_leaf_wand.name=Superior Leaf Wand
