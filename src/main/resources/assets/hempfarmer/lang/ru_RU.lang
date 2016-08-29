@@ -1,10 +1,11 @@
-#DAsh0t
+#Перевод от DAsh0t
 itemGroup.hfcombat=HempFarmer-Снаряжение
 itemGroup.hfcrops=HempFarmer-Семена
 itemGroup.hfdrugs=HempFarmer-Лекарство
 itemGroup.hffoods=HempFarmer-Еда
 itemGroup.hfmisc=HempFarmer-Разное
 
+item.shot_leaf.name=Магический Лист
 item.leaf.name=Листья Конопли
 item.leaf_wand.name=Конопляная Палочка
 item.superior_leaf_wand.name=Супер Конопляная Палочка
