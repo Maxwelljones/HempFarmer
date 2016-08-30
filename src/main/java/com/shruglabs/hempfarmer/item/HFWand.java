@@ -19,14 +19,16 @@ import net.minecraft.world.World;
 
 public class HFWand extends HFItem {
 
+	public static int leafDamage;
+	public static int superiorDamage;
 	private int uses;
 
 	public HFWand(String name) {
 		super(name, 1);
 		if (this.getRegistryName().toString().substring(11).startsWith("superior")) {
-			this.setMaxDamage(300);
+			this.setMaxDamage(superiorDamage);
 		} else {
-			this.setMaxDamage(75);
+			this.setMaxDamage(leafDamage);
 		}
 	}
 

@@ -54,7 +54,6 @@ public class RenderShotLeaf extends Render<EntityShotLeaf> {
 	}
 
 	private ItemStack getStackToRender(EntityShotLeaf entity) {
-
 		return new ItemStack(this.item);
 	}
 

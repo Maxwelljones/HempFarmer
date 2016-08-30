@@ -22,19 +22,9 @@ public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent preEvent) {
 		MinecraftForge.EVENT_BUS.register(HempFarmer.instance);
-		if (preEvent.getSide().isServer())
+
 			Config.serverConfig(preEvent);
-		else {
-			EntityShotLeaf.entity = true;
-			EntityShotLeaf.player = true;
-			EntityShotLeaf.block = true;
-			Hemp.seedsGrassRate = 6;
-			Indica.seedsGrassRate = 4;
-			Sativa.seedsGrassRate = 4;
-			HFBlockCrops.seedsCropAmount = 1;
-			HFBlockCrops.hempAmount = 1;
-			HFBlockCrops.budAmount = 1;
-		}
+
 		register(preEvent);
 
 	}
