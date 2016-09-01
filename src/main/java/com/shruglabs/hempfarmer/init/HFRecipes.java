@@ -154,7 +154,7 @@ public class HFRecipes {
 		GameRegistry
 				.addRecipe(new ShapelessOreRecipe(new ItemStack(HFItems.rolling_paper, 3), new Object[] { "paper" }));
 		// Vanilla Paper//- Shapeless Recipe
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.PAPER, 3),
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.PAPER),
 				new Object[] { new ItemStack(HFItems.rolling_paper), new ItemStack(HFItems.rolling_paper),
 						new ItemStack(HFItems.rolling_paper) }));
 		// Joints//- Shapeless Recipe
