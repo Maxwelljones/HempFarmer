@@ -29,7 +29,7 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent event) {
 		HFOreDictionary.init(event);
 		registerRender(event);
-		GameRegistry.registerWorldGenerator(new HempGen(), 0);
+		GameRegistry.registerWorldGenerator(new HempGen(), 2);
 
 	}
 

@@ -16,19 +16,24 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class HempGen implements IWorldGenerator {
 
-	private WorldGenBush hemp;
-	private WorldGenBush indica;
-	private WorldGenBush sativa;
+	private HempGen hemp;
+	private HempGen indica;
+	private HempGen sativa;
+	private HFBlockCrops crop;
 
 	public HempGen() {
-		this.hemp = new WorldGenBush((BlockBush) HFBlocks.hemp_crop);
-		this.indica = new WorldGenBush((BlockBush) HFBlocks.indica_crop);
-		this.sativa = new WorldGenBush((BlockBush) HFBlocks.sativa_crop);
+		this.hemp = new HempGen((HFBlockCrops) HFBlocks.hemp_crop);
+		this.indica = new HempGen((HFBlockCrops) HFBlocks.indica_crop);
+		this.sativa = new HempGen((HFBlockCrops) HFBlocks.sativa_crop);
+	}
+
+	public HempGen(HFBlockCrops crop) {
+		this.crop = crop;
 	}
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator,
-			IChunkProvider chunkProvider) {
+			IChunkProvider chunkProvider) { 
 
 		switch (world.provider.getDimension()) {
 		case 0:
@@ -45,7 +50,7 @@ public class HempGen implements IWorldGenerator {
 		}
 	}
 
-	private void runGenerator(WorldGenerator gen, World world, Random rand, int chunkX, int chunkZ, int chance) {
+	private void runGenerator(HempGen gen, World world, Random rand, int chunkX, int chunkZ, int chance) {
 
 		int maxHeight = world.getHeight() + 1;
 		int chancesToSpawn = chance;
@@ -56,10 +61,23 @@ public class HempGen implements IWorldGenerator {
 			y = (y <= maxHeight) ? y : y + d;
 			int z = chunkZ * 16 + rand.nextInt(16);
 			System.out.println("X: " + x + " Y: " + y + " Z: " + z);
-				gen.generate(world, rand, new BlockPos(x, y, z));
+			gen.generate(world, rand, new BlockPos(x, y, z));
 
 		}
 
+	}
+
+	private void generate(World world, Random rand, BlockPos pos) {
+		for (int i = 0; i < 64; ++i)
+        {
+            BlockPos blockpos = pos.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
+
+            if (world.isAirBlock(blockpos) && (!world.provider.getHasNoSky() || blockpos.getY() < world.getHeight() - 1) && this.crop.canBlockStay(world, blockpos, this.crop.getDefaultState()))
+            {
+                world.setBlockState(blockpos, this.crop.getDefaultState(), 2);
+            }
+        }
+		
 	}
 
 }
