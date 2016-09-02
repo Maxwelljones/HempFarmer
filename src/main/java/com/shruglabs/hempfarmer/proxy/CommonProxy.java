@@ -2,21 +2,18 @@ package com.shruglabs.hempfarmer.proxy;
 
 import com.shruglabs.hempfarmer.Config;
 import com.shruglabs.hempfarmer.HempFarmer;
-import com.shruglabs.hempfarmer.block.HFBlockCrops;
-import com.shruglabs.hempfarmer.block.cannibis.Hemp;
-import com.shruglabs.hempfarmer.block.cannibis.Indica;
-import com.shruglabs.hempfarmer.block.cannibis.Sativa;
+import com.shruglabs.hempfarmer.HempGen;
 import com.shruglabs.hempfarmer.entity.EntityShotLeaf;
 import com.shruglabs.hempfarmer.init.HFBlocks;
 import com.shruglabs.hempfarmer.init.HFItems;
 import com.shruglabs.hempfarmer.init.HFOreDictionary;
 import com.shruglabs.hempfarmer.init.HFRecipes;
-import com.shruglabs.hempfarmer.item.HFWand;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy {
 
@@ -32,6 +29,8 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent event) {
 		HFOreDictionary.init(event);
 		registerRender(event);
+		GameRegistry.registerWorldGenerator(new HempGen(), 0);
+
 	}
 
 	public void register(FMLPreInitializationEvent preEvent) {

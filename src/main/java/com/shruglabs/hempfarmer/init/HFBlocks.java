@@ -71,7 +71,7 @@ public class HFBlocks extends Blocks {
 			Item item = new Item().getItemFromBlock(block);
 			RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
 			renderItem.getItemModelMesher().register(item, 0,
-					new ModelResourceLocation(block.getRegistryName().toString(), "inventory"));
+					new ModelResourceLocation(block.getRegistryName().toString(), ("inventory")));
 		}
 	}
 

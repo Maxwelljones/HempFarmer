@@ -19,7 +19,21 @@ build
 
 # other
 eclipse
-run
+run/banned-ips.json
+run/banned-players.json
+run/config
+run/eula.txt
+run/mods
+run/ops.json
+run/options.txt
+run/resourcepacks/*
+run/saves/*
+run/server.properties
+run/servers.dat
+run/server-resource-packs/*
+run/usercache.json
+run/usernamecache.json
+run/whitelist.json
 
 #Forge
 README.txt
