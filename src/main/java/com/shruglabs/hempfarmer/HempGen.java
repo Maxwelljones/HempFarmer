@@ -1,39 +1,186 @@
 package com.shruglabs.hempfarmer;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import com.shruglabs.hempfarmer.block.HFBlockCrops;
 import com.shruglabs.hempfarmer.init.HFBlocks;
 
-import net.minecraft.block.BlockBush;
+import net.minecraft.block.BlockCrops;
+import net.minecraft.init.Biomes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenBush;
-import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class HempGen implements IWorldGenerator {
 
-	private HempGen hemp;
-	private HempGen indica;
-	private HempGen sativa;
-	private HFBlockCrops crop;
+	private WorldGenBush hemp;
+	private WorldGenBush indica;
+	private WorldGenBush sativa;
 
 	public HempGen() {
-		this.hemp = new HempGen((HFBlockCrops) HFBlocks.hemp_crop);
-		this.indica = new HempGen((HFBlockCrops) HFBlocks.indica_crop);
-		this.sativa = new HempGen((HFBlockCrops) HFBlocks.sativa_crop);
-	}
+		this.hemp = new WorldGenBush((HFBlockCrops) HFBlocks.hemp_crop) {
+			private List<Biome> biomes = new ArrayList();
+			private boolean initialized;
 
-	public HempGen(HFBlockCrops crop) {
-		this.crop = crop;
+			public void addBiomes() {
+				this.biomes.add(Biomes.JUNGLE);
+				this.biomes.add(Biomes.JUNGLE_EDGE);
+				this.biomes.add(Biomes.JUNGLE_HILLS);
+				this.biomes.add(Biomes.MUTATED_JUNGLE);
+				this.biomes.add(Biomes.MUTATED_JUNGLE_EDGE);
+				this.biomes.add(Biomes.FOREST);
+				this.biomes.add(Biomes.FOREST_HILLS);
+				this.biomes.add(Biomes.MUTATED_FOREST);
+				this.biomes.add(Biomes.BIRCH_FOREST);
+				this.biomes.add(Biomes.BIRCH_FOREST_HILLS);
+				this.biomes.add(Biomes.MUTATED_BIRCH_FOREST);
+				this.biomes.add(Biomes.MUTATED_BIRCH_FOREST_HILLS);
+				this.biomes.add(Biomes.ROOFED_FOREST);
+				this.biomes.add(Biomes.MUTATED_ROOFED_FOREST);
+				this.biomes.add(Biomes.MUTATED_PLAINS);
+				this.biomes.add(Biomes.PLAINS);
+				this.biomes.add(Biomes.REDWOOD_TAIGA);
+				this.biomes.add(Biomes.REDWOOD_TAIGA_HILLS);
+				this.biomes.add(Biomes.MUTATED_REDWOOD_TAIGA);
+				this.biomes.add(Biomes.MUTATED_REDWOOD_TAIGA_HILLS);
+				this.biomes.add(Biomes.SWAMPLAND);
+				this.biomes.add(Biomes.MUTATED_SWAMPLAND);
+				this.initialized = true;
+
+			}
+
+			@Override
+			public boolean generate(World worldIn, Random rand, BlockPos position) {
+				if(!this.initialized){
+					this.addBiomes();
+				}
+				for (int i = 0; i < 64; ++i) {
+					BlockPos blockpos = position.add(rand.nextInt(8) - rand.nextInt(8),
+							rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
+					Biome biome = worldIn.getBiomeForCoordsBody(blockpos);
+					if (this.biomes.contains(biome)) {
+						if (worldIn.isAirBlock(blockpos)
+								&& (!worldIn.provider.getHasNoSky() || blockpos.getY() < worldIn.getHeight() - 1)
+								&& ((BlockCrops) HFBlocks.hemp_crop).canBlockStay(worldIn, blockpos,
+										HFBlocks.hemp_crop.getDefaultState())) {
+							worldIn.setBlockState(blockpos, HFBlocks.hemp_crop.getDefaultState(), 2);
+						}
+					}
+
+				}
+
+				return true;
+			}
+		};
+		this.indica = new WorldGenBush((HFBlockCrops) HFBlocks.indica_crop) {
+			private List<Biome> biomes = new ArrayList();
+			private boolean initialized;
+
+			public void addBiomes() {
+				this.biomes.add(Biomes.JUNGLE);
+				this.biomes.add(Biomes.JUNGLE_EDGE);
+				this.biomes.add(Biomes.JUNGLE_HILLS);
+				this.biomes.add(Biomes.MUTATED_JUNGLE);
+				this.biomes.add(Biomes.MUTATED_JUNGLE_EDGE);
+				this.biomes.add(Biomes.FOREST);
+				this.biomes.add(Biomes.FOREST_HILLS);
+				this.biomes.add(Biomes.MUTATED_FOREST);
+				this.biomes.add(Biomes.BIRCH_FOREST);
+				this.biomes.add(Biomes.BIRCH_FOREST_HILLS);
+				this.biomes.add(Biomes.MUTATED_BIRCH_FOREST);
+				this.biomes.add(Biomes.MUTATED_BIRCH_FOREST_HILLS);
+				this.biomes.add(Biomes.ROOFED_FOREST);
+				this.biomes.add(Biomes.MUTATED_ROOFED_FOREST);
+				this.biomes.add(Biomes.SWAMPLAND);
+				this.biomes.add(Biomes.MUTATED_SWAMPLAND);
+				this.initialized = true;
+
+			}
+
+			@Override
+			public boolean generate(World worldIn, Random rand, BlockPos position) {
+				if(!this.initialized){
+					this.addBiomes();
+				}for (int i = 0; i < 64; ++i) {
+					BlockPos blockpos = position.add(rand.nextInt(8) - rand.nextInt(8),
+							rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
+					Biome biome = worldIn.getBiomeForCoordsBody(blockpos);
+					if (this.biomes.contains(biome)) {
+						if (worldIn.isAirBlock(blockpos)
+								&& (!worldIn.provider.getHasNoSky() || blockpos.getY() < worldIn.getHeight() - 1)
+								&& ((BlockCrops) HFBlocks.indica_crop).canBlockStay(worldIn, blockpos,
+										HFBlocks.indica_crop.getDefaultState())) {
+							worldIn.setBlockState(blockpos, HFBlocks.indica_crop.getDefaultState(), 2);
+						}
+					}
+
+				}
+
+				return true;
+			}
+		};
+		this.sativa = new WorldGenBush((HFBlockCrops) HFBlocks.sativa_crop) {
+			private List<Biome> biomes = new ArrayList();
+			private boolean initialized;
+
+			public void addBiomes() {
+				this.biomes.add(Biomes.JUNGLE);
+				this.biomes.add(Biomes.JUNGLE_EDGE);
+				this.biomes.add(Biomes.JUNGLE_HILLS);
+				this.biomes.add(Biomes.MUTATED_JUNGLE);
+				this.biomes.add(Biomes.MUTATED_JUNGLE_EDGE);
+				this.biomes.add(Biomes.FOREST);
+				this.biomes.add(Biomes.FOREST_HILLS);
+				this.biomes.add(Biomes.MUTATED_FOREST);
+				this.biomes.add(Biomes.BIRCH_FOREST);
+				this.biomes.add(Biomes.BIRCH_FOREST_HILLS);
+				this.biomes.add(Biomes.MUTATED_BIRCH_FOREST);
+				this.biomes.add(Biomes.MUTATED_BIRCH_FOREST_HILLS);
+				this.biomes.add(Biomes.ROOFED_FOREST);
+				this.biomes.add(Biomes.MUTATED_ROOFED_FOREST);
+				this.biomes.add(Biomes.SWAMPLAND);
+				this.biomes.add(Biomes.MUTATED_SWAMPLAND);
+				this.initialized = true;
+
+			}
+
+			@Override
+			public boolean generate(World worldIn, Random rand, BlockPos position) {
+				if(!this.initialized){
+					this.addBiomes();
+				}for (int i = 0; i < 64; ++i) {
+					BlockPos blockpos = position.add(rand.nextInt(8) - rand.nextInt(8),
+							rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
+					Biome biome = worldIn.getBiomeForCoordsBody(blockpos);
+					if (this.biomes.contains(biome)) {
+						if (worldIn.isAirBlock(blockpos)
+								&& (!worldIn.provider.getHasNoSky() || blockpos.getY() < worldIn.getHeight() - 1)
+								&& ((BlockCrops) HFBlocks.sativa_crop).canBlockStay(worldIn, blockpos,
+										HFBlocks.sativa_crop.getDefaultState())) {
+							worldIn.setBlockState(blockpos, HFBlocks.sativa_crop.getDefaultState(), 2);
+							int x = blockpos.getX();
+							int y = blockpos.getY();
+							int z = blockpos.getZ();
+						}
+					}
+
+				}
+
+				return true;
+			}
+		};
+
 	}
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator,
-			IChunkProvider chunkProvider) { 
+			IChunkProvider chunkProvider) {
 
 		switch (world.provider.getDimension()) {
 		case 0:
@@ -50,7 +197,7 @@ public class HempGen implements IWorldGenerator {
 		}
 	}
 
-	private void runGenerator(HempGen gen, World world, Random rand, int chunkX, int chunkZ, int chance) {
+	private void runGenerator(WorldGenBush gen, World world, Random rand, int chunkX, int chunkZ, int chance) {
 
 		int maxHeight = world.getHeight() + 1;
 		int chancesToSpawn = chance;
@@ -60,24 +207,10 @@ public class HempGen implements IWorldGenerator {
 			int d = maxHeight - y;
 			y = (y <= maxHeight) ? y : y + d;
 			int z = chunkZ * 16 + rand.nextInt(16);
-			System.out.println("X: " + x + " Y: " + y + " Z: " + z);
 			gen.generate(world, rand, new BlockPos(x, y, z));
 
 		}
 
-	}
-
-	private void generate(World world, Random rand, BlockPos pos) {
-		for (int i = 0; i < 64; ++i)
-        {
-            BlockPos blockpos = pos.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && (!world.provider.getHasNoSky() || blockpos.getY() < world.getHeight() - 1) && this.crop.canBlockStay(world, blockpos, this.crop.getDefaultState()))
-            {
-                world.setBlockState(blockpos, this.crop.getDefaultState(), 2);
-            }
-        }
-		
 	}
 
 }

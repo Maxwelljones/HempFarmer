@@ -3,6 +3,7 @@ package com.shruglabs.hempfarmer.proxy;
 import com.shruglabs.hempfarmer.Config;
 import com.shruglabs.hempfarmer.HempFarmer;
 import com.shruglabs.hempfarmer.HempGen;
+import com.shruglabs.hempfarmer.block.HFBlockCrops;
 import com.shruglabs.hempfarmer.entity.EntityShotLeaf;
 import com.shruglabs.hempfarmer.init.HFBlocks;
 import com.shruglabs.hempfarmer.init.HFItems;
@@ -30,7 +31,6 @@ public class CommonProxy {
 		HFOreDictionary.init(event);
 		registerRender(event);
 		GameRegistry.registerWorldGenerator(new HempGen(), 2);
-
 	}
 
 	public void register(FMLPreInitializationEvent preEvent) {
