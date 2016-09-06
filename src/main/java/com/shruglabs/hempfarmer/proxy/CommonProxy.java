@@ -21,7 +21,7 @@ public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent preEvent) {
 		MinecraftForge.EVENT_BUS.register(HempFarmer.instance);
 
-			Config.serverConfig(preEvent);
+			Config.config(preEvent);
 
 		register(preEvent);
 

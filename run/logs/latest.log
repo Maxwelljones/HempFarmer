@@ -1,21 +1,14 @@
-[18:28:36] [main/INFO]: Logging in with username & password
-[18:28:43] [Client thread/INFO]: Setting user: SeqSEE
-[18:28:50] [Client thread/WARN]: Skipping bad option: lastServer:
-[18:28:50] [Client thread/INFO]: LWJGL Version: 2.9.4
-[18:28:58] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:HempFarmer, FMLFileResourcePack:Just Enough Items, FMLFileResourcePack:Waila, FMLFileResourcePack:I Can See Everything, FMLFileResourcePack:What Are We Looking At
-[18:29:06] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[18:29:06] [Thread-8/INFO]: Initializing LWJGL OpenAL
-[18:29:06] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[18:29:06] [Thread-8/INFO]: OpenAL initialized.
-[18:29:07] [Sound Library Loader/INFO]: Sound engine started
-[18:29:14] [Client thread/INFO]: Created: 16x16 textures-atlas
-[18:29:17] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:HempFarmer, FMLFileResourcePack:Just Enough Items, FMLFileResourcePack:Waila, FMLFileResourcePack:I Can See Everything, FMLFileResourcePack:What Are We Looking At
-[18:29:20] [Client thread/INFO]: SoundSystem shutting down...
-[18:29:21] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[18:29:21] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[18:29:21] [Thread-12/INFO]: Initializing LWJGL OpenAL
-[18:29:21] [Thread-12/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[18:29:21] [Thread-12/INFO]: OpenAL initialized.
-[18:29:21] [Sound Library Loader/INFO]: Sound engine started
-[18:29:25] [Client thread/INFO]: Created: 1024x512 textures-atlas
-[18:29:27] [Client thread/WARN]: Skipping bad option: lastServer:
+[06:49:44] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 58904319ms behind, skipping 1178086 tick(s)
+[06:49:47] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 3050ms behind, skipping 61 tick(s)
+[06:49:54] [Client thread/INFO]: Stopping!
+[06:49:54] [Client thread/INFO]: SoundSystem shutting down...
+[06:49:55] [Server thread/INFO]: Stopping server
+[06:49:55] [Server thread/INFO]: Saving players
+[06:49:55] [Server thread/INFO]: Saving worlds
+[06:49:55] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[06:49:55] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[06:49:55] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[06:49:55] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[06:49:55] [Client Shutdown Thread/INFO]: Stopping server
+[06:49:55] [Client Shutdown Thread/INFO]: Saving players
+[06:49:55] [Client Shutdown Thread/INFO]: Saving worlds

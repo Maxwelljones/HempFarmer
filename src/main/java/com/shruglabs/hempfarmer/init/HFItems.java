@@ -97,19 +97,18 @@ public class HFItems extends Items {
 	public static Item resin_sword = new HFSword("resin_sword", HFSword.RESIN, resin);
 	public static Item hemp_paper = new HFItem("hemp_paper", 64);
 	public static Item hemp_milk_bucket = new HempMilkBucket("hemp_milk_bucket", 1);
-	public static Item hemp_hearts = new HempFood("hemp_hearts", 4, 4.0F);
-	public static Item lime_hemp_hearts = new HempFood("lime_hemp_hearts", 5, 5.0F);
-	public static Item violet_hemp_hearts = new HempFood("violet_hemp_hearts", 5, 5.0F);
-	public static Item bowl_hemp_hearts = new HempFood("bowl_hemp_hearts", 8, 8.0F);
-	public static Item bowl_violet_hemp_hearts = new HempFood("bowl_violet_hemp_hearts", 10, 10.0F);
-	public static Item bowl_lime_hemp_hearts = new HempFood("bowl_lime_hemp_hearts", 10, 10.0F);
+	public static Item hemp_hearts = new HempFood("hemp_hearts", 2, 2.0F);
+	public static Item lime_hemp_hearts = new HempFood("lime_hemp_hearts", 2, 2.5F);
+	public static Item violet_hemp_hearts = new HempFood("violet_hemp_hearts", 2, 2.5F);
+	public static Item bowl_hemp_hearts = new HempFood("bowl_hemp_hearts", 4, 4.0F);
+	public static Item bowl_violet_hemp_hearts = new HempFood("bowl_violet_hemp_hearts", 5, 5.0F);
+	public static Item bowl_lime_hemp_hearts = new HempFood("bowl_lime_hemp_hearts", 5, 5.0F);
 	public static Item seeds_hemp_toasted = new HFItem("seeds_hemp_toasted", 64);
-	public static Item seeds_hemp_crushed = new HFItem("seeds_hemp_crushed", 64);
+	public static Item seeds_hemp_crushed = new HempFood("seeds_hemp_crushed", 1, 0.5F);
 	public static Item seeds_indica_toasted = new HFItem("seeds_indica_toasted", 64);
-	public static Item seeds_indica_crushed = new HFItem("seeds_indica_crushed", 64);
+	public static Item seeds_indica_crushed = new HempFood("seeds_indica_crushed", 1, 0.5F);
 	public static Item seeds_sativa_toasted = new HFItem("seeds_sativa_toasted", 64);
-	public static Item seeds_sativa_crushed = new HFItem("seeds_sativa_crushed", 64);
-
+	public static Item seeds_sativa_crushed = new HempFood("seeds_sativa_crushed", 1, 0.5F);
 
 	public static List<Item> itemList() {
 		return items;

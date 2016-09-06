@@ -21,7 +21,6 @@ public class HFBlockCrops extends BlockCrops {
 	public HFBlockCrops(String name) {
 		this.setRegistryName(name);
 		this.setUnlocalizedName(name);
-		this.setDefaultState(this.withAge(7));
 		this.setCreativeTab(HFCreativeTabs.HFCrops);
 		addToBlocks(this);
 

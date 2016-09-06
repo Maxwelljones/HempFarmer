@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class Config {
 
-	public static void serverConfig(FMLPreInitializationEvent preEvent) {
+	public static void config(FMLPreInitializationEvent preEvent) {
 		HempFarmer.config = new Configuration(preEvent.getSuggestedConfigurationFile());
 		EntityShotLeaf.entity = HempFarmer.config.getBoolean("Wand- Effective on Entities:", "Wand", true, "Wand Effective on non-player entities.");
 		EntityShotLeaf.player = HempFarmer.config.getBoolean("Wand- Effective on Players:", "Wand", true, "Wand Effective on player entities.");
