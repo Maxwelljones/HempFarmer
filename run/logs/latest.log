@@ -1,14 +1,88 @@
-[06:49:44] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 58904319ms behind, skipping 1178086 tick(s)
-[06:49:47] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 3050ms behind, skipping 61 tick(s)
-[06:49:54] [Client thread/INFO]: Stopping!
-[06:49:54] [Client thread/INFO]: SoundSystem shutting down...
-[06:49:55] [Server thread/INFO]: Stopping server
-[06:49:55] [Server thread/INFO]: Saving players
-[06:49:55] [Server thread/INFO]: Saving worlds
-[06:49:55] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[06:49:55] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[06:49:55] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[06:49:55] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[06:49:55] [Client Shutdown Thread/INFO]: Stopping server
-[06:49:55] [Client Shutdown Thread/INFO]: Saving players
-[06:49:55] [Client Shutdown Thread/INFO]: Saving worlds
+[21:26:01] [main/INFO]: Logging in with username & password
+[21:26:13] [Client thread/INFO]: Setting user: SeqSEE
+[21:26:24] [Client thread/WARN]: Skipping bad option: lastServer:
+[21:26:24] [Client thread/INFO]: LWJGL Version: 2.9.4
+[21:26:35] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:HempFarmer, FMLFileResourcePack:Just Enough Items, FMLFileResourcePack:Waila, FMLFileResourcePack:I Can See Everything, FMLFileResourcePack:What Are We Looking At
+[21:26:40] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:26:41] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[21:26:41] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:26:41] [Thread-8/INFO]: OpenAL initialized.
+[21:26:41] [Sound Library Loader/INFO]: Sound engine started
+[21:26:50] [Client thread/INFO]: Created: 16x16 textures-atlas
+[21:26:55] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:HempFarmer, FMLFileResourcePack:Just Enough Items, FMLFileResourcePack:Waila, FMLFileResourcePack:I Can See Everything, FMLFileResourcePack:What Are We Looking At
+[21:26:59] [Client thread/INFO]: SoundSystem shutting down...
+[21:26:59] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[21:26:59] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:26:59] [Thread-12/INFO]: Initializing LWJGL OpenAL
+[21:26:59] [Thread-12/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:27:00] [Thread-12/INFO]: OpenAL initialized.
+[21:27:00] [Sound Library Loader/INFO]: Sound engine started
+[21:27:06] [Client thread/INFO]: Created: 1024x512 textures-atlas
+[21:27:09] [Client thread/WARN]: Skipping bad option: lastServer:
+[21:27:15] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
+[21:27:15] [Server thread/INFO]: Generating keypair
+[21:27:17] [Server thread/INFO]: Preparing start region for level 0
+[21:27:18] [Server thread/INFO]: Preparing spawn area: 0%
+[21:27:19] [Server thread/INFO]: Preparing spawn area: 56%
+[21:27:20] [Server thread/INFO]: Changing view distance to 12, from 10
+[21:27:21] [Server thread/INFO]: SeqSEE[local:E:dcf13c6a] logged in with entity id 73 at (693.1105485589169, 130.88183296023445, 90.03662163978636)
+[21:27:21] [Server thread/INFO]: SeqSEE joined the game
+[21:27:26] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4906ms behind, skipping 98 tick(s)
+[21:27:29] [Server thread/INFO]: Saving and pausing game...
+[21:27:29] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:27:30] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:27:30] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:27:30] [Server thread/INFO]: Stopping server
+[21:27:30] [Server thread/INFO]: Saving players
+[21:27:30] [Server thread/INFO]: Saving worlds
+[21:27:30] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:27:30] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:27:30] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:27:35] [Client thread/INFO]: Deleting level New World
+[21:27:35] [Client thread/INFO]: Attempt 1...
+[21:27:39] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
+[21:27:39] [Server thread/INFO]: Generating keypair
+[21:27:41] [Server thread/INFO]: Preparing start region for level 0
+[21:27:42] [Server thread/INFO]: Preparing spawn area: 6%
+[21:27:43] [Server thread/INFO]: Preparing spawn area: 13%
+[21:27:44] [Server thread/INFO]: Preparing spawn area: 21%
+[21:27:45] [Server thread/INFO]: Preparing spawn area: 29%
+[21:27:46] [Server thread/INFO]: Preparing spawn area: 40%
+[21:27:47] [Server thread/INFO]: Preparing spawn area: 51%
+[21:27:48] [Server thread/INFO]: Preparing spawn area: 63%
+[21:27:49] [Server thread/INFO]: Preparing spawn area: 75%
+[21:27:50] [Server thread/INFO]: Preparing spawn area: 89%
+[21:27:51] [Server thread/INFO]: Preparing spawn area: 99%
+[21:27:51] [Server thread/INFO]: Changing view distance to 12, from 10
+[21:27:52] [Server thread/INFO]: SeqSEE[local:E:c25239cb] logged in with entity id 846 at (-184.5, 85.0, 234.5)
+[21:27:52] [Server thread/INFO]: SeqSEE joined the game
+[21:27:52] [Server thread/INFO]: Saving and pausing game...
+[21:27:52] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:27:54] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:27:54] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:27:56] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 3959ms behind, skipping 79 tick(s)
+[21:28:28] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2067ms behind, skipping 41 tick(s)
+[21:29:32] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 3670ms behind, skipping 73 tick(s)
+[21:29:57] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 10612ms behind, skipping 212 tick(s)
+[21:30:16] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 9841ms behind, skipping 196 tick(s)
+[21:30:36] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 10299ms behind, skipping 205 tick(s)
+[21:30:58] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 11379ms behind, skipping 227 tick(s)
+[21:31:15] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 12353ms behind, skipping 247 tick(s)
+[21:31:32] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 10333ms behind, skipping 206 tick(s)
+[21:32:17] [Server thread/INFO]: Saving and pausing game...
+[21:32:17] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:32:17] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:32:17] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:32:17] [Server thread/INFO]: Saving and pausing game...
+[21:32:17] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:32:18] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:32:18] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:32:18] [Server thread/INFO]: Stopping server
+[21:32:18] [Server thread/INFO]: Saving players
+[21:32:18] [Server thread/INFO]: Saving worlds
+[21:32:18] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:32:18] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:32:18] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:32:20] [Client thread/INFO]: Stopping!
+[21:32:20] [Client thread/INFO]: SoundSystem shutting down...
+[21:32:20] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

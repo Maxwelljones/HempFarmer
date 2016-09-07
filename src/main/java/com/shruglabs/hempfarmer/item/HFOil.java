@@ -16,8 +16,11 @@ import net.minecraft.world.World;
 
 public class HFOil extends HFItem{
 
+	public static int oilMaxStack;
+
+
 	public HFOil(String name) {
-		super(name, 1);
+		super(name, oilMaxStack);
 	}
 	
 	

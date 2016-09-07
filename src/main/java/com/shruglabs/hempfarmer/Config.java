@@ -4,6 +4,9 @@ import com.shruglabs.hempfarmer.block.cannibis.Hemp;
 import com.shruglabs.hempfarmer.block.cannibis.Indica;
 import com.shruglabs.hempfarmer.block.cannibis.Sativa;
 import com.shruglabs.hempfarmer.entity.EntityShotLeaf;
+import com.shruglabs.hempfarmer.init.HFItems;
+import com.shruglabs.hempfarmer.item.HFArmor;
+import com.shruglabs.hempfarmer.item.HFOil;
 import com.shruglabs.hempfarmer.item.HFWand;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -43,6 +46,9 @@ public class Config {
 				"Amount of hemp to drop from Sativa Crop.");
 		Sativa.budAmount = HempFarmer.config.getInt("Sativa- Bud drop amount:", "Drops-Buds", 1, 0, 5,
 				"Amount of buds to drop from Sativa Crop.");
+		HFOil.oilMaxStack = HempFarmer.config.getInt("Oil Bottle Max Stack:", "Oils", 1, 1, 64,
+				"Maximum stack size for oil bottles.");
+		HFArmor.particles = HempFarmer.config.getBoolean("Armor Particle effects:", "Armor", true, "Create particle effects for HempFarmer armors.");
 		HempFarmer.config.save();
 		Config.save();
 

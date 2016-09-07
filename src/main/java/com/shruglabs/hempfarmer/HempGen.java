@@ -57,20 +57,23 @@ public class HempGen implements IWorldGenerator {
 
 			@Override
 			public boolean generate(World worldIn, Random rand, BlockPos position) {
-				if(!this.initialized){
+				if (!this.initialized) {
 					this.addBiomes();
 				}
 				for (int i = 0; i < 64; ++i) {
 					BlockPos blockpos = position.add(rand.nextInt(8) - rand.nextInt(8),
 							rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
 					Biome biome = worldIn.getBiomeForCoordsBody(blockpos);
-					if (this.biomes.contains(biome)) {
+					if (biome.getTempCategory() == Biome.TempCategory.WARM
+							|| biome.getTempCategory() == Biome.TempCategory.MEDIUM || this.biomes.contains(biome)) {
 						if (worldIn.isAirBlock(blockpos)
 								&& (!worldIn.provider.getHasNoSky() || blockpos.getY() < worldIn.getHeight() - 1)
 								&& ((BlockCrops) HFBlocks.hemp_crop).canBlockStay(worldIn, blockpos,
 										HFBlocks.hemp_crop.getDefaultState())) {
-							worldIn.setBlockState(blockpos, HFBlocks.hemp_crop.getDefaultState(), 2);
+							worldIn.setBlockState(blockpos, HFBlocks.hemp_crop.getDefaultState()
+									.withProperty(HFBlockCrops.AGE, rand.nextInt(7)), 2);
 						}
+
 					}
 
 				}
@@ -105,19 +108,22 @@ public class HempGen implements IWorldGenerator {
 
 			@Override
 			public boolean generate(World worldIn, Random rand, BlockPos position) {
-				if(!this.initialized){
+				if (!this.initialized) {
 					this.addBiomes();
-				}for (int i = 0; i < 64; ++i) {
+				}
+				for (int i = 0; i < 64; ++i) {
 					BlockPos blockpos = position.add(rand.nextInt(8) - rand.nextInt(8),
 							rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
 					Biome biome = worldIn.getBiomeForCoordsBody(blockpos);
-					if (this.biomes.contains(biome)) {
+					if (biome.getTempCategory() == Biome.TempCategory.WARM || this.biomes.contains(biome)) {
 						if (worldIn.isAirBlock(blockpos)
 								&& (!worldIn.provider.getHasNoSky() || blockpos.getY() < worldIn.getHeight() - 1)
 								&& ((BlockCrops) HFBlocks.indica_crop).canBlockStay(worldIn, blockpos,
 										HFBlocks.indica_crop.getDefaultState())) {
-							worldIn.setBlockState(blockpos, HFBlocks.indica_crop.getDefaultState(), 2);
+							worldIn.setBlockState(blockpos, HFBlocks.indica_crop.getDefaultState()
+									.withProperty(HFBlockCrops.AGE, rand.nextInt(7)), 2);
 						}
+
 					}
 
 				}
@@ -152,18 +158,20 @@ public class HempGen implements IWorldGenerator {
 
 			@Override
 			public boolean generate(World worldIn, Random rand, BlockPos position) {
-				if(!this.initialized){
+				if (!this.initialized) {
 					this.addBiomes();
-				}for (int i = 0; i < 64; ++i) {
+				}
+				for (int i = 0; i < 64; ++i) {
 					BlockPos blockpos = position.add(rand.nextInt(8) - rand.nextInt(8),
 							rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
 					Biome biome = worldIn.getBiomeForCoordsBody(blockpos);
-					if (this.biomes.contains(biome)) {
+					if (biome.getTempCategory() == Biome.TempCategory.WARM || this.biomes.contains(biome)) {
 						if (worldIn.isAirBlock(blockpos)
 								&& (!worldIn.provider.getHasNoSky() || blockpos.getY() < worldIn.getHeight() - 1)
 								&& ((BlockCrops) HFBlocks.sativa_crop).canBlockStay(worldIn, blockpos,
 										HFBlocks.sativa_crop.getDefaultState())) {
-							worldIn.setBlockState(blockpos, HFBlocks.sativa_crop.getDefaultState(), 2);
+							worldIn.setBlockState(blockpos, HFBlocks.sativa_crop.getDefaultState()
+									.withProperty(HFBlockCrops.AGE, rand.nextInt(7)), 2);
 							int x = blockpos.getX();
 							int y = blockpos.getY();
 							int z = blockpos.getZ();

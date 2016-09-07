@@ -33,7 +33,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class HFItems extends Items {
-
 	public static List<Item> items = new ArrayList();
 	public static Item shot_leaf = new HFEntityItem("shot_leaf");
 	public static Item regs_joint = new Joint("regs_joint", 5);
@@ -109,6 +108,7 @@ public class HFItems extends Items {
 	public static Item seeds_indica_crushed = new HempFood("seeds_indica_crushed", 1, 0.5F);
 	public static Item seeds_sativa_toasted = new HFItem("seeds_sativa_toasted", 64);
 	public static Item seeds_sativa_crushed = new HempFood("seeds_sativa_crushed", 1, 0.5F);
+	
 
 	public static List<Item> itemList() {
 		return items;
