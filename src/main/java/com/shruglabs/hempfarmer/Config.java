@@ -49,6 +49,7 @@ public class Config {
 		HFOil.oilMaxStack = HempFarmer.config.getInt("Oil Bottle Max Stack:", "Oils", 1, 1, 64,
 				"Maximum stack size for oil bottles.");
 		HFArmor.particles = HempFarmer.config.getBoolean("Armor Particle effects:", "Armor", true, "Create particle effects for HempFarmer armors.");
+		HFArmor.buffs = HempFarmer.config.getBoolean("Armor Potion effects:", "Armor", true, "Apply potion effects for HempFarmer armors.");
 		HempFarmer.config.save();
 		Config.save();
 
